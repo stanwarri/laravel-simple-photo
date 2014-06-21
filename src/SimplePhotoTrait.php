@@ -28,7 +28,7 @@ trait SimplePhotoTrait
                 $data = $sp->build($data->toArray(), $parameters);
             } else if (array_key_exists($key, $this->relations)) {
                 if ($data == null) {
-                    $data = $sp->build(null, $parameters);
+                    $data = $sp->build(array(), $parameters);
                 }
             } else {
                 $data = $sp->get($this->getKey(), $parameters);
